@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hidden Admin Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Hidden Admin Editor</h1>
+      <p class="subtitle">Upload image, drag-select zone, save entry to server dataset.</p>
+      <p id="adminStatus" class="message"></p>
+
+      <form id="adminForm" class="admin-form hidden">
+        <label>Champion <input id="name" required /></label>
+        <label>Game <input id="game" required value="League of Legends" /></label>
+        <label>Skin <input id="skin" required value="Classic" /></label>
+        <label>Image file <input id="file" type="file" accept="image/*" required /></label>
+        <label>Focus X <input id="focusX" type="number" min="0" max="100" value="50" required /></label>
+        <label>Focus Y <input id="focusY" type="number" min="0" max="100" value="50" required /></label>
+        <button type="submit">Save entry</button>
+      </form>
+
+      <div id="editorWrap" class="hidden">
+        <h2>Zone selector</h2>
+        <p class="subtitle small">Drag a rectangle. Center becomes focus X/Y.</p>
+        <canvas id="editorCanvas" width="900" height="500"></canvas>
+      </div>
+
+      <h2>Existing entries</h2>
+      <table>
+        <thead><tr><th>Champion</th><th>Game</th><th>Skin</th><th>Focus</th><th>Actions</th></tr></thead>
+        <tbody id="entries"></tbody>
+      </table>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

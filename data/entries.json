@@ -1,0 +1,47 @@
+[
+  {
+    "id": "mf",
+    "name": "Miss Fortune",
+    "game": "League of Legends",
+    "skin": "Classic",
+    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/MissFortune_0.jpg",
+    "focusX": 62,
+    "focusY": 68
+  },
+  {
+    "id": "ahri",
+    "name": "Ahri",
+    "game": "League of Legends",
+    "skin": "Classic",
+    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
+    "focusX": 59,
+    "focusY": 64
+  },
+  {
+    "id": "kaisa",
+    "name": "Kai'Sa",
+    "game": "League of Legends",
+    "skin": "Classic",
+    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Kaisa_0.jpg",
+    "focusX": 50,
+    "focusY": 61
+  },
+  {
+    "id": "evelynn",
+    "name": "Evelynn",
+    "game": "League of Legends",
+    "skin": "Classic",
+    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Evelynn_0.jpg",
+    "focusX": 55,
+    "focusY": 58
+  },
+  {
+    "id": "akali",
+    "name": "Akali",
+    "game": "League of Legends",
+    "skin": "Classic",
+    "image": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
+    "focusX": 49,
+    "focusY": 64
+  }
+]

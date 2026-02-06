@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess Who's Ass Is This?</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Guess Who's Ass Is This?</h1>
+        <p class="subtitle">Solo or online 1v1. Lower score wins.</p>
+      </header>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="solo">Solo</button>
+        <button class="tab" data-tab="online">Online Multiplayer</button>
+      </nav>
+
+      <section id="soloPanel" class="panel active">
+        <section class="hud">
+          <div><strong>Round:</strong> <span id="roundLabel">1</span></div>
+          <div><strong>Guesses:</strong> <span id="guessCount">0</span></div>
+          <div><strong>Total:</strong> <span id="totalPoints">0</span> <small>(lower is better)</small></div>
+        </section>
+
+        <div class="frame-wrap">
+          <div class="frame"><img id="champImage" alt="Zoomed in splash art" /></div>
+        </div>
+
+        <section class="controls" id="controls">
+          <label for="guessInput">Your guess</label>
+          <input id="guessInput" type="text" list="champions" placeholder="Type champion name" autocomplete="off" />
+          <datalist id="champions"></datalist>
+          <div class="buttons">
+            <button id="guessBtn">Submit guess</button>
+            <button id="revealBtn" class="secondary">Reveal / skip (+15)</button>
+          </div>
+        </section>
+
+        <section class="message" id="message"></section>
+
+        <section id="endScreen" class="end-screen hidden">
+          <h2>Scoreboard</h2>
+          <p id="finalScore"></p>
+          <ol id="scoreBreakdown"></ol>
+          <button id="restartBtn">Play again</button>
+        </section>
+      </section>
+
+      <section id="onlinePanel" class="panel">
+        <h2>Online Multiplayer (1v1)</h2>
+        <div class="online-grid">
+          <label>Nickname <input id="nickInput" type="text" value="Player" /></label>
+          <button id="connectBtn">Connect</button>
+          <button id="createRoomBtn">Create room</button>
+          <label>Room code <input id="roomCodeInput" type="text" /></label>
+          <button id="joinRoomBtn">Join room</button>
+          <button id="startOnlineBtn">Start match (host)</button>
+        </div>
+        <p id="onlineStatus" class="message"></p>
+        <ul id="onlinePlayers"></ul>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
